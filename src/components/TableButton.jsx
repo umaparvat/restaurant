@@ -4,7 +4,9 @@ const TableButton = props => {
   var style = {
     width: 80,
     height: 80,
-    margin: 25,
+    margin: 10,
+    borderRadius: "25%",
+    paddingTop: "0%",
     border: props.selectedTable === props.id ? "1px solid blue" : null,
     backgroundColor: props.tableStatusData[props.id] ? "red" : null
   };

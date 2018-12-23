@@ -1,8 +1,16 @@
 import { connect } from "react-redux";
 import Details from "../components/Details.jsx";
 
-const mapStateToProps = state => {};
+const mapStateToProps = state => {
+  return {
+    selectedTable: state.selectedTable,
+    items: state.tableData[state.selectedTable]
+  };
+};
 
-const DetailsContainer = connect()(Details);
+const DetailsContainer = connect(
+  mapStateToProps,
+  null
+)(Details);
 
 export default DetailsContainer;
